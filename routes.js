@@ -2,7 +2,7 @@ const express = require("express");
 const { register, login, getUsers } = require("./controller");
 const middleware = require("./middlewares");
 
-const authRouter = express.Router();
+const authRouter = express.router();
 
 authRouter.get("/", async (req, res) => {
   res.json(getUsers());
